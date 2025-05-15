@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/userProfile',
       name:'userProfile',
       component: () => import('../views/userProfile.vue'),
+    },
+    {
+      path: '/buyCryptoSelect',
+      name:'buyCryptoSelect',
+      component: () => import('../views/buyCryptoSelect.vue'),
     }
     // ...generateAsyncRoutes()
   ],
