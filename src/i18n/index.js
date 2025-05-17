@@ -1,0 +1,29 @@
+import { createI18n } from 'vue-i18n';
+// import { App } from 'vue';
+import zh from './zh';
+import en from './en';
+// import ja from './ja';
+// import ko from './ko';
+
+const storedLang = localStorage.getItem('language') || 'en'; // 使用浏览器localStorage
+const browserLang = navigator.language.startsWith('zh') ? 'zh-Hans' : navigator.language.split('-')[0];
+const langDefault = storedLang || browserLang || 'en'; // 使用浏览器语言检测
+
+console.log('langDefault', langDefault)
+
+// 语言库
+const messages = {
+  'en': en,
+  'zh-Hans': zh,
+  // 'ja': ja,
+  // 'ko': ko
+}
+
+const i18n = createI18n({
+	legacy: false,
+  globalInjection: true, // 允许模板中使用$t
+	locale: langDefault,		//默认显示的语言 
+	messages
+})
+
+export { i18n };

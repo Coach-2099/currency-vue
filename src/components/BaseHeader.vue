@@ -47,6 +47,9 @@
                     <li class="menu-item">
                       <a href="#">Markets</a>
                     </li>
+                    <!-- <li class="menu-item" @click="goRouter">
+                      <div>交易</div>
+                    </li> -->
                     <li class="menu-item-has-children">
                       <a href="#">Sell Crypto</a>
                       <ul class="sub-menu">
@@ -459,6 +462,9 @@ export default {
     toggleMobileMenu(event) {
       event.target.classList.toggle('active')
       document.getElementById('main-nav-mobi').classList.toggle('active')
+    },
+    goRouter() {
+      this.$router.push('/trade')
     },
   },
 }

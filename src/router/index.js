@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { usePermissionStore } from '@/stores/permission'
+// import { usePermissionStore } from '@/stores/permission'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/buyCryptoSelect',
       name:'buyCryptoSelect',
       component: () => import('../views/buyCryptoSelect.vue'),
+    },
+    {
+      path: '/trade',
+      name:'trade',
+      component: () => import('../views/trade.vue'),
     }
     // ...generateAsyncRoutes()
   ],
@@ -49,19 +54,19 @@ const router = createRouter({
 
 // 添加路由守卫
 router.beforeEach(async (to) => {
-  const permissionStore = usePermissionStore()
+  // const permissionStore = usePermissionStore()
   // hasToken()
   // if (to.meta.requiresAuth && !hasToken()) {
   if (to.meta.requiresAuth) {
     return '/login'
   }
   
-  if (permissionStore.routes.length === 0) {
+  // if (permissionStore.routes.length === 0) {
     // 调用接口获取路由数据
     // const { data } = await getRoutesAPI()
     // permissionStore.setRoutes(data)
     // router.addRoute(generateAsyncRoutes())
-  }
+  // }
 })
 
 export default router
