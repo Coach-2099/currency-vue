@@ -9,8 +9,12 @@
         </div>
         <div class="chartAndlist d-grid">
           <div class="chartView">图表</div>
-          <div class="orderBook">Order Book</div>
-          <div class="recentTrades">Recent Trades</div>
+          <div class="orderBook">
+            <orderBook />
+          </div>
+          <div class="recentTrades">
+            <recentTrades />
+          </div>
         </div>
         <div class="orderListView">订单列表模块</div>
         <!-- <LightweightChart
@@ -36,12 +40,16 @@ import BaseHeader from '@/components/BaseHeader.vue'
 // import SaleSection from '@/components/SaleSection.vue'
 // import BaseFooter from '@/components/BaseFooter.vue'
 import topView from '@/components/tradeComponents/topView.vue'
+import orderBook from '@/components/tradeComponents/orderBook.vue'
+import recentTrades from '@/components/tradeComponents/recentTrades.vue'
 import LightweightChart from '@/components/LightweightChart/index.vue'
 export default {
   name: 'UserTrade',
   components: {
     BaseHeader,
     topView,
+    orderBook,
+    recentTrades,
     // SaleSection,
     // BaseFooter,
     LightweightChart,
@@ -79,20 +87,20 @@ export default {
 <style lang="scss" scoped>
 .content {
   grid-template-columns: 5fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 4px;
   height: calc(100vh - 50px);
-  background: var(--bg);
+  background: var(--line);
   .dataView {
     min-height: 600px;
     .contentWidth {
       width: 100%;
-      height: 56px;
+      // line-height: 56px;
       background: var(--bg1);
     }
     .chartAndlist {
       grid-template-columns: 5fr 1.5fr 1.5fr;
-      grid-gap: 5px;
-      margin-top: 5px;
+      grid-gap: 4px;
+      margin-top: 3px;
       .chartView,
       .orderBook,
       .recentTrades {
