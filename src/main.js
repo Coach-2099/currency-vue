@@ -1,4 +1,6 @@
 import './assets/main.css'
+import ElementUI from 'element-plus';
+import 'element-plus/dist/index.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -14,5 +16,6 @@ app.use(i18n)
 app.use(pinia)
 app.use(createPinia())
 app.use(router)
+app.use(ElementUI);
 
 app.mount('#app')

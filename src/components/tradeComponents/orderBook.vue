@@ -16,7 +16,7 @@
         </select>
       </div>
     </div>
-    <div class="d-flex justify-content-between align-items-sm-center mt-2 px-2 text-muted">
+    <div class="d-flex justify-content-between align-items-sm-center mt-2 px-2 text-muted mb-3">
       <div class="fs-14">Price(USDT)</div>
       <div class="d-flex justify-content-between w-50">
         <div class="fs-14">Qty(BTC)</div>
@@ -28,14 +28,14 @@
       :key="index"
       class="d-flex justify-content-between align-items-center mt-1 mb-1 px-2"
     >
-      <div class="fs-14 text-danger">103818.1</div>
+      <div class="fs-14 base-text-red">103818.1</div>
       <div class="d-flex justify-content-between w-50 text-black">
         <div class="fs-14 text-start">0.00333</div>
         <div class="fs-14 text-end">19.098</div>
       </div>
     </div>
-    <div class="d-flex px-2">
-      <div class="fs-16 text-success">103,867.10</div>
+    <div class="d-flex px-2 mt-2 mb-2">
+      <div class="fs-16 base-text-green me-2">103,867.10</div>
       <div class="fs-14">≈103,867.10 USD</div>
     </div>
     <div
@@ -43,7 +43,7 @@
       :key="index"
       class="d-flex justify-content-between align-items-center mt-1 mb-1 px-2"
     >
-      <div class="fs-14 text-success">103818.1</div>
+      <div class="fs-14 base-text-green">103818.1</div>
       <div class="d-flex justify-content-between w-50 text-black">
         <div class="fs-14 text-start">0.00333</div>
         <div class="fs-14 text-end">19.098</div>

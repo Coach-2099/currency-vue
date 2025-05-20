@@ -38,7 +38,7 @@ const viteConfig = defineConfig(({ mode }) => {
             }
         },
         server: {
-            port: 8088,
+            port: 8000,
             // hmr: true, // 启用热更新
             hmr: { overlay: false }, // 启用热更新
             proxy: {

@@ -13,7 +13,7 @@
       :key="index"
       class="d-flex justify-content-between align-items-center mt-2 mb-1 px-2"
     >
-      <div class="fs-14 text-danger">103818.1</div>
+      <div class="fs-14 base-text-red">103818.1</div>
       <div class="d-flex justify-content-between w-50 text-black">
         <div class="fs-14 text-start">0.00333</div>
         <div class="fs-14 text-end">19.098</div>

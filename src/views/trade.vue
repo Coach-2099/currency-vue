@@ -8,7 +8,18 @@
           <topView />
         </div>
         <div class="chartAndlist d-grid">
-          <div class="chartView">图表</div>
+          <div class="chartView">
+            <!-- <LightweightChart
+              ref="chartRef"
+              v-model:data="candleData"
+              :ema-configs="emaConfigs"
+              :theme="theme"
+              :initial-interval="currentInterval"
+              @interval-change="handleIntervalChange"
+              :hasMore="hasMore"
+              @load-more-data="handleLoadMore"
+            ></LightweightChart> -->
+          </div>
           <div class="orderBook">
             <orderBook />
           </div>
@@ -16,21 +27,12 @@
             <recentTrades />
           </div>
         </div>
-        <div class="orderListView">订单列表模块</div>
-        <!-- <LightweightChart
-          ref="chartRef"
-          v-model:data="candleData"
-          :ema-configs="emaConfigs"
-          :theme="theme"
-          :initial-interval="currentInterval"
-          @interval-change="handleIntervalChange"
-          :hasMore="hasMore"
-          @load-more-data="handleLoadMore"
-        ></LightweightChart> -->
+        <div class="orderListView">
+          <orders />
+        </div>
       </div>
       <div class="tradeView">右侧</div>
     </div>
-
     <!-- <SaleSection /> -->
     <!-- <BaseFooter /> -->
   </div>
@@ -42,6 +44,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
 import topView from '@/components/tradeComponents/topView.vue'
 import orderBook from '@/components/tradeComponents/orderBook.vue'
 import recentTrades from '@/components/tradeComponents/recentTrades.vue'
+import orders from '@/components/tradeComponents/orders.vue'
 import LightweightChart from '@/components/LightweightChart/index.vue'
 export default {
   name: 'UserTrade',
@@ -50,6 +53,7 @@ export default {
     topView,
     orderBook,
     recentTrades,
+    orders,
     // SaleSection,
     // BaseFooter,
     LightweightChart,
@@ -96,6 +100,7 @@ export default {
       width: 100%;
       // line-height: 56px;
       background: var(--bg1);
+      padding-bottom: 5px;
     }
     .chartAndlist {
       grid-template-columns: 5fr 1.5fr 1.5fr;
@@ -112,6 +117,7 @@ export default {
     }
     .orderListView {
       margin-top: 5px;
+      background: var(--bg1);
     }
   }
   .tradeView {

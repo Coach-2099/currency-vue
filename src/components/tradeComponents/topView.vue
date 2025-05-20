@@ -1,7 +1,7 @@
 <template>
   <div class="topView d-flex justify-content-start align-items-center">
     <div class="btnImg d-flex justify-content-start align-items-center">
-      <image src="@/static/images/checkBit.png" mode="scaleToFill" />
+      <img src="@/assets/images/icon/checkBit.png" mode="scaleToFill" />
       <div>B</div>
     </div>
     <div class="ps-xl-2 pe-xl-3">
@@ -44,7 +44,7 @@ export default {
   border-radius: 10px;
   .btnImg {
     padding-left: 16px;
-    image {
+    img {
       width: 18px;
       height: 18px;
     }
@@ -59,7 +59,7 @@ export default {
   }
   .text-decoration-line-blink {
     border-bottom: 1px dashed #000;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
   }
 }
 </style>
